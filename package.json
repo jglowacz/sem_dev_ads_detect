@@ -1,0 +1,19 @@
+{
+  "name": "sem_dev_ads_detect",
+  "version": "1.0.0",
+  "description": "API for detecting phishing ads",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "jglowacz, akolba",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "playwright": "^1.34.0",
+    "sharp": "^0.32.1",
+    "swagger-ui-express": "^4.6.3",
+    "tesseract.js": "^4.0.6"
+  }
+}

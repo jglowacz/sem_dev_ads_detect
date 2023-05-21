@@ -1,0 +1,45 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "sem_dev_ads_detect",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "/api/"
+    }
+  ],
+  "paths": {
+    "/ad": {
+      "get": {
+        "tags": [
+          "url"
+        ],
+        "summary": "Accepts website's link and returns info about phishing ads",
+        "parameters": [
+          {
+            "name": "detect",
+            "in": "query",
+            "description": "Input url",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "available"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {}
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      }
+    }
+  }
+}
