@@ -9,7 +9,7 @@ async function takeScreenShots(url) {
 
     // Create a new context.
     const context = await browser.newContext({
-        recordHar: { path: './har/example4.har' }
+        recordHar: { path: './har/example.har' }
     });
 
     // Create a new page.
@@ -22,7 +22,7 @@ async function takeScreenShots(url) {
     await page.goto(url, { waitUntil: 'load' })
 
     // Target accept button.
-    const acceptButton = await page.waitForSelector('div[text*=akcept]' , { visible: true });
+    const acceptButton = await page.waitForSelector('button[class*=accept]' , { visible: true });
 
     // Click on accept button.
     await acceptButton.click();
